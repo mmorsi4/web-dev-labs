@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+</head>
+<body>
+  <h2>My To-Do List</h2>
+  <input id="task" type="text" placeholder="Write a task">
+  <button onclick="add()">Add</button>
+  <ul id="list"></ul>
+
+  <script>
+    function add() {
+      let text = document.getElementById("task").value;
+      if (text === "") return;
+      let li = document.createElement("li");
+      li.innerHTML = text;
+
+      let checkBtn = document.createElement("button");
+      checkBtn.innerHTML = "Check";
+      checkBtn.onclick = function() {
+        if (li.style.textDecoration === "line-through") {
+          li.style.textDecoration = "";
+          checkBtn.innerHTML = "Check";
+        } else {
+          li.style.textDecoration = "line-through";
+          checkBtn.innerHTML = "Checked";
+        }
+      }
+
+      let removeBtn = document.createElement("button");
+      removeBtn.innerHTML = "X";
+      removeBtn.onclick = function() {
+        li.remove();
+      }
+
+      li.appendChild(checkBtn);
+      li.appendChild(removeBtn);
+      document.getElementById("list").appendChild(li);
+      document.getElementById("task").value = "";
+    }
+  </script>
+</body>
+</html>

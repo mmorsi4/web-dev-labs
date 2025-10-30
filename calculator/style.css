@@ -1,0 +1,31 @@
+.calculator{
+    flex: 1;
+    background-color: gainsboro;
+    max-width: 350px;
+    margin-left: 37%;
+    margin-top: 10%;
+}
+
+button{
+    border-radius: 100px;
+    padding: 25px;
+    background-color: grey;
+    color: white;
+    flex: 1;
+}
+
+.buttonset{
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.screen{
+    padding-left: 5px;
+    border: 2px solid;
+    border-color: black;
+    background-color: white;
+    max-width: 350px;
+    text-align: left;
+}
