@@ -74,16 +74,16 @@ export default function CategoryCards() {
           </button>
 
           <div className="category-cards-container">
-            {visibleCards.map((card) => (
-              <div key={card.id} className="category-card">
-                <img src={card.image || "/placeholder.svg"} alt={card.title} />
-                <div className="category-card-footer">
-                  <h3>{card.title}</h3>
-                  <p>{card.students} students</p>
-                </div>
+          {visibleCards.map((card) => (
+            <div key={card.id} className="category-card">
+              <img src={card.image || "/placeholder.svg"} alt={card.title} />
+              <div className="category-card-overlay">
+                <div className="cardstudentcount">{card.students}+</div>
+                <h3 className="cardtitle">{card.title}</h3>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
           <button
             className={`category-arrow right-arrow ${categoryIndex === maxIndex ? "disabled" : ""}`}

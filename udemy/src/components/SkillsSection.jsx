@@ -14,6 +14,7 @@ export default function SkillsSection() {
       rating: 4.4,
       reviews: 153,
       price: "£349.99",
+      strikedprice: "£1000.99",
       badge: "365 Careers",
     },
     {
@@ -24,6 +25,7 @@ export default function SkillsSection() {
       rating: 4.5,
       reviews: 1045,
       price: "£349.99",
+      strikedprice: "£1000.99",
       badge: "Bestseller",
     },
     {
@@ -34,6 +36,7 @@ export default function SkillsSection() {
       rating: 4.5,
       reviews: 28,
       price: "£349.99",
+      strikedprice: "£1000.99",
       badge: "Bestseller",
     },
     {
@@ -44,6 +47,7 @@ export default function SkillsSection() {
       rating: 4.5,
       reviews: 2012,
       price: "£349.99",
+      strikedprice: "£1000.99",
       badge: "Premium",
     },
     {
@@ -54,6 +58,7 @@ export default function SkillsSection() {
       rating: 4.6,
       reviews: 892,
       price: "£399.99",
+      strikedprice: "£1000.99",
       badge: "Popular",
     },
   ]
@@ -101,13 +106,11 @@ export default function SkillsSection() {
               <h3>{course.title}</h3>
               <p className="instructor">{course.instructor}</p>
               <div className="course-footer">
-                <div className="rating">
-                  <span className="stars">★ {course.rating}</span>
-                  <span className="reviews">({course.reviews} ratings)</span>
-                </div>
-                {course.badge && <span className="badge">{course.badge}</span>}
+                {course.badge && <span className="rating-pill badge-pill">{course.badge}</span>}
+                <span className="rating-pill stars-pill">★ {course.rating}</span>
+                <span className="rating-pill">{course.reviews} ratings</span>
               </div>
-              <p className="price">{course.price}</p>
+              <div className="price">{course.price}<s class='striked'>{course.strikedprice}</s></div>
             </div>
           ))}
         </div>

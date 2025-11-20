@@ -3,6 +3,9 @@ export default function Header() {
     <header className="header">
       <div className="header-left">
         <img src="/logo-udemy.svg" width="100" />
+        <a href="#" className="nav-link">
+          Explore
+        </a>
         <input type="text" className="search" placeholder="Search for anything" />
       </div>
       <div className="header-right">

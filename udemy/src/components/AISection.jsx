@@ -8,19 +8,19 @@ export default function AISection() {
         </p>
         <div className="ai-features">
           <div className="feature">
-            <span className="feature-icon">🤖</span>
+            <span className="feature-icon">O</span>
             <span>Learn AI and more</span>
           </div>
           <div className="feature">
-            <span className="feature-icon">📋</span>
+            <span className="feature-icon">O</span>
             <span>Prep for a certification</span>
           </div>
           <div className="feature">
-            <span className="feature-icon">👤</span>
+            <span className="feature-icon">O</span>
             <span>Practice with AI coaching</span>
           </div>
           <div className="feature">
-            <span className="feature-icon">🎯</span>
+            <span className="feature-icon">O</span>
             <span>Advance your career</span>
           </div>
         </div>
